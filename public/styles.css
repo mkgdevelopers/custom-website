@@ -1,0 +1,143 @@
+:root {
+  --panel: #ffffff;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --bg: #f3f4f6;
+  --border: #d1d5db;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: #111827;
+}
+
+header {
+  padding: 1rem 1.5rem;
+  background: #0f172a;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a { color: #93c5fd; }
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 270px 1fr 340px;
+  gap: 1rem;
+  padding: 1rem;
+  min-height: calc(100vh - 72px);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.controls {
+  display: grid;
+  gap: 0.75rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: #1f2937;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 0.55rem 0.8rem;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #4b5563;
+}
+
+button.danger {
+  background: #dc2626;
+}
+
+#canvas-wrap {
+  overflow: auto;
+}
+
+#canvas {
+  position: relative;
+  width: 1200px;
+  min-height: 700px;
+  border-radius: 16px;
+  border: 1px dashed #94a3b8;
+  background: white;
+}
+
+.canvas-element {
+  position: absolute;
+  user-select: none;
+  cursor: move;
+  outline: 1px dashed transparent;
+}
+
+.canvas-element.selected {
+  outline-color: #2563eb;
+}
+
+.layer-item {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+}
+
+.layer-item.active {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.viewer {
+  min-height: calc(100vh - 72px);
+}
+
+#rendered-site {
+  position: relative;
+  min-height: calc(100vh - 72px);
+  margin: 0 auto;
+}
+
+.site-element {
+  position: absolute;
+}
+
+.status {
+  color: var(--muted);
+  min-height: 1.2em;
+}
