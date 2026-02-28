@@ -1,0 +1,11 @@
+{
+  "name": "custom-website-builder",
+  "version": "1.0.0",
+  "description": "Full-stack customizable website builder with admin dashboard",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}

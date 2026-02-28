@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard • Website Builder</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <strong>Admin Dashboard</strong>
+        <div class="status" id="save-status">Customize and publish your site.</div>
+      </div>
+      <div>
+        <a href="/" target="_blank" rel="noreferrer">View user site ↗</a>
+      </div>
+    </header>
+
+    <main class="app-layout">
+      <section class="panel">
+        <h3>Toolbox</h3>
+        <div class="controls">
+          <button data-add="heading">+ Heading</button>
+          <button data-add="paragraph">+ Paragraph</button>
+          <button data-add="button">+ Button</button>
+          <button data-add="image">+ Image</button>
+          <button class="secondary" id="duplicate-element">Duplicate Selected</button>
+          <button class="danger" id="delete-element">Delete Selected</button>
+        </div>
+
+        <h4>Layers</h4>
+        <div id="layer-list"></div>
+      </section>
+
+      <section class="panel" id="canvas-wrap">
+        <h3>Drag-and-drop Canvas</h3>
+        <div id="canvas"></div>
+      </section>
+
+      <section class="panel">
+        <h3>Global Styling</h3>
+        <div class="controls">
+          <label>Site title <input id="site-title" /></label>
+          <label>Page background <input id="global-bg" type="color" /></label>
+          <label>Text color <input id="global-text" type="color" /></label>
+          <label>Accent color <input id="global-accent" type="color" /></label>
+          <label>Font family
+            <select id="global-font">
+              <option>Inter, Arial, sans-serif</option>
+              <option>Georgia, serif</option>
+              <option>'Trebuchet MS', sans-serif</option>
+              <option>'Courier New', monospace</option>
+            </select>
+          </label>
+          <label>Hero gradient <input id="global-gradient" /></label>
+          <label>Max width (px) <input id="global-max-width" type="number" min="600" max="1800" /></label>
+        </div>
+
+        <h3>Selected Element</h3>
+        <div class="controls">
+          <label>Text / URL <textarea id="el-text" rows="2"></textarea></label>
+          <label>Color <input id="el-color" type="color" /></label>
+          <label>Background <input id="el-bg" type="color" /></label>
+          <label>Font size <input id="el-size" type="number" min="10" max="120" /></label>
+          <label>Font weight <input id="el-weight" type="number" min="100" max="900" step="100" /></label>
+          <label>Width <input id="el-width" type="number" min="40" max="1200" /></label>
+          <label>Height <input id="el-height" type="number" min="20" max="600" /></label>
+          <label>X <input id="el-x" type="number" min="0" max="1400" /></label>
+          <label>Y <input id="el-y" type="number" min="0" max="1400" /></label>
+          <label>Border radius <input id="el-radius" type="number" min="0" max="80" /></label>
+          <label>Text align
+            <select id="el-align">
+              <option value="left">left</option>
+              <option value="center">center</option>
+              <option value="right">right</option>
+            </select>
+          </label>
+          <button id="save-layout">Save & Publish</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/admin.js"></script>
+  </body>
+</html>
